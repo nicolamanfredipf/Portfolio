@@ -1,0 +1,6 @@
+@import './variables.scss';
+
+@mixin defaultColors{
+    background-color: $bg-color;
+    color: $silver;
+}

@@ -1,0 +1,11 @@
+@import './variables.scss';
+@import './utils.scss';
+
+html, body{
+    @include defaultColors;
+}
+
+a{
+    all: unset;
+    cursor: pointer;
+}
