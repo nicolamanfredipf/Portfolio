@@ -1,0 +1,15 @@
+@import '/src/styles/utils.scss';
+@import '/src/styles/variables.scss';
+
+main{
+    @include size(90%, 50%);
+    @include glass-effect;
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translateX(-50%);
+    border-radius: $border-radius;
+    overflow-y: auto;
+    padding: $mobile-p;
+
+}
