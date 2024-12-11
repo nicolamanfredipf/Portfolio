@@ -11,6 +11,7 @@ html,
 body {
     @include default-colors;
     @include no-space;
+    font-family: 'Lofi_Lifestyle_Demo';
 }
 
 a {
@@ -28,21 +29,61 @@ h6 {
     display: block;
     color: $white;
     // font-weight: 400;
+    font-family: 'PressStart2P';
+    text-shadow:
+        0 0 20px black,
+        0 0 20px black,
+        0 0 10px black,
+        0 0 10px black;
 }
 
 h1 {
-    font-size: 2em;
+    font-size: 1.8em;
+
 }
 
 h2 {
-    font-size: 1.8em;
-}
-
-h3 {
     font-size: 1.6em;
 }
 
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 0.6em;
+}
+
+ul {
+    list-style: none;
+    @include no-space;
+}
+
 @media(min-width:$tablet) {
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.6em;
+    }
+
+    h4 {
+        font-size: 1.4em;
+    }
+
+    p {
+        font-size: 1.4em;
+    }
+
+}
+
+@media(min-width:$desktop) {
 
     h1 {
         font-size: 2.2em;
@@ -56,20 +97,25 @@ h3 {
         font-size: 1.8em;
     }
 
-
+    h4 {
+        font-size: 1.6em;
+    }
+    p {
+        font-size: 1.6em;
+    }
 }
 
-@media(min-width:$desktop) {
+@font-face {
+    font-family: 'Lofi_Lifestyle_Demo';
+    src: url('/assets/fonts/lofi-lifestyle/Lofi_Lifestyle_Demo.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-    h1 {
-        font-size: 2.4em;
-    }
 
-    h2 {
-        font-size: 2.2em;
-    }
-
-    h3 {
-        font-size: 2em;
-    }
+@font-face {
+    font-family: 'PressStart2P';
+    src: url('/assets/fonts/press-start-2p/PressStart2P.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }

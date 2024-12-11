@@ -9,6 +9,7 @@ div {
     overflow: hidden;
 }
 
+
 video {
     @include full;
     position: absolute;
@@ -21,11 +22,7 @@ video {
 header {
     @include full;
     padding: $mobile-p;
-}
-
-@media(max-width:$desktop) {
-    header {
-        padding: $tablet-p;
+    &:hover {
         @include glass-effect;
     }
 }
@@ -43,20 +40,9 @@ header {
 @media(min-width:$desktop) {
     div {
         @include size($desktop-card-w, $desktop-card-h);
-
-        &:hover {
-            @include zoom-in;
-        }
-
-        &:not(:hover) {
-            @include zoom-out;
-        }
     }
 
     header {
         padding: $desktop-p;
-        &:hover {
-            @include glass-effect;
-        }
     }
 }
