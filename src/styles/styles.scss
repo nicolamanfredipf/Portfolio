@@ -1,11 +1,63 @@
 @import './variables.scss';
 @import './utils.scss';
 
-html, body{
-    @include defaultColors;
+html,
+body {
+    @include default-colors;
+    @include no-space;
 }
 
-a{
+a {
     all: unset;
     cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    all: unset;
+    display: block;
+    color: $white;
+    // font-weight: 400;
+}
+
+h1{
+    font-size: 2em;
+}
+h2{
+    font-size: 1.8em;
+}
+h3{
+    font-size: 1.6em;
+}
+
+@media(min-width:$tablet){
+
+    h1{
+        font-size: 2.2em;
+    }
+    h2{
+        font-size: 2em;
+    }
+    h3{
+        font-size: 1.8em;
+    }
+    
+
+}
+
+@media(min-width:$desktop){
+
+    h1{
+        font-size: 2.4em;
+    }
+    h2{
+        font-size: 2.2em;
+    }
+    h3{
+        font-size: 2em;
+    }
 }

@@ -1,0 +1,25 @@
+@import '/src/styles/variables.scss';
+
+ul {
+    position: fixed;
+    bottom: 10px;
+    left: calc($mobile-card-w/2 + $mobile-gap);
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: $mobile-gap;
+}
+
+@media(min-width:$tablet){
+    ul {
+        left: calc($tablet-card-w + $tablet-gap*3);
+        gap: $tablet-gap;
+    }
+}
+
+@media(min-width:$desktop){
+    ul {
+        left: calc($desktop-card-w*2);
+        gap: $tablet-gap;
+    }
+}

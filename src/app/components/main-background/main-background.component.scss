@@ -1,0 +1,15 @@
+@import '/src/styles/utils.scss';
+
+div{
+    @include screen;
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+
+video{
+    @include full;
+    @include cover-center;
+    @include no-space
+}

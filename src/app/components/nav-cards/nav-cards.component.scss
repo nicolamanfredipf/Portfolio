@@ -1,0 +1,62 @@
+@import '/src/styles/utils.scss';
+@import '/src/styles/animations.scss';
+
+div {
+    @include size($mobile-card-w, $mobile-card-h);
+    position: relative;
+    z-index: 1;
+    border-radius: $border-radius;
+    overflow: hidden;
+}
+
+video {
+    @include full;
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+header {
+    @include full;
+    padding: $mobile-p;
+}
+
+@media(max-width:$desktop) {
+    header {
+        padding: $tablet-p;
+        @include glass-effect;
+    }
+}
+
+@media(min-width:$tablet) {
+    div {
+        @include size($tablet-card-w, $tablet-card-h);
+    }
+
+    header {
+        padding: $tablet-p;
+    }
+}
+
+@media(min-width:$desktop) {
+    div {
+        @include size($desktop-card-w, $desktop-card-h);
+
+        &:hover {
+            @include zoom-in;
+        }
+
+        &:not(:hover) {
+            @include zoom-out;
+        }
+    }
+
+    header {
+        padding: $desktop-p;
+        &:hover {
+            @include glass-effect;
+        }
+    }
+}
